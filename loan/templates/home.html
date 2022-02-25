@@ -1,0 +1,26 @@
+<html>
+    <head>
+        
+    </head>
+    <body bgcolor="yellow">
+        <center>Hello there</center>
+        <br>
+        
+        <h1>Loan Calculate</h1>
+        <form action="calculate" method="POST">
+            {% csrf_token %}
+            Enter Release Date: 
+            <input type='date' name="secondDate"><br><br>
+            Enter Loan Date: 
+            <input type="date" name="firstDate"><br><br>
+            Enter Principal Amount: 
+            <input type="text" name="amount"><br><br>
+            Enter Interest (p/m): 
+            <input type="text" name="interest" placeholder="Optional"><br><br>
+            <input type="submit" value="Calculate">
+        </form>
+        
+
+            <h1> Result = {{result}} </h1>
+        </body>
+</html>
